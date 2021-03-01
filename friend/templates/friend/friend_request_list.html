@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- <h2>friend request List</h2><br> -->
+    <!-- {{friend_request_list}} -->
+    <!-- bellow code cand be improved by using scipt which process which button clicked and 
+    calling view which do process for accept and delete request -->
+    <div class="user_list_container">
+    {% for friend_request in friend_request_list %}
+    <div class='user_list_div'>
+        <form action="{% url 'friend:process_friend_request' %}" method="POST"> {% csrf_token %}
+            <img src="{{friend_request.fr_send_by.profile_pic.url}}" width="100px" height="100px"> {{friend_request.fr_send_by.username}}<br>
+            <!-- <button type="submit" formaction="accept_request/">Accept</button>
+            <button type="submit" formaction="delete_request/">Delete</button> -->
+            <input type="hidden" value="vis" name="test_input">
+            <!-- <input type="submit" value="abc" name="submit_value" id="sub_val"> -->
+            <input type="submit" value="Accept" name="accept">
+            <input type="submit" value="Delete" name='delete'>
+            <input type="hidden" value="abc" name="submit_value" id="sub_val">
+            <input type="hidden" value={{friend_request.fr_send_by}} name="fr_send_by">
+            <input type="hidden" value={{friend_request.fr_send_to}} name="fr_send_to">
+            <input type="hidden" value={{friend_request.id}} name="fr_id">
+        </form>
+    </div>
+        
+    {% endfor %}
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("form").submit(function() { 
+                var val = $("input[type=submit][clicked=true]").val();
+                // DO WORK
+                // alert(val);
+                var submit_value = document.getElementById("sub_val");
+                submit_value.setAttribute("value", val);
+                // alert(submit_value.value);
+
+            });
+            $("form input[type=submit]").click(function() {
+                $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
+                $(this).attr("clicked", "true");
+            });
+        });
+    </script>
+{% endblock %}

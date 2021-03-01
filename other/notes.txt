@@ -1,0 +1,15 @@
+# set username and password and configure mysqldb for django
+=> go to step 5
+https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database
+
+# we can setup diffrent password for database like this but i did't implimented it now for simplicity
+CREATE USER 'vishvajeet_d'@'%' IDENTIFIED WITH mysql_native_password BY 'django';
+GRANT ALL ON connection.* TO 'django_vishvajeet'@'%'
+FLUSH PRIVILEGES;
+
+# for uploading file in django
+=> https://stackoverflow.com/questions/39877708/django-file-upload-with-updateview#39877881
+
+
+
+

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- <h2>Post List</h2> -->
+    <!-- <ul> -->
+    <div class="rightcolumn">
+        <div class="card">
+            <h1> Welcome to Connection </h1>
+            {{ c_user }}
+            {{ c_user.username }}
+        
+            {{ c_user.dob }}
+        {% for post in object_list %}
+
+        <!-- card representing post -->
+        <div class=post>
+            <div class="user_detail" height="80px" width="550px">
+              <img src="{{post.user_who_posted.profile_pic.url}}" class="profile_pic" height="50px" width="50px">
+              {{post.user_who_posted}}
+              <!-- {{post.user_who_posted.user_id}} -->
+              <!-- time -->
+              <button type="button" style="float: right;">Other</button>
+            </div>
+            <div class="text_description">{{post.text_description}}</div>
+            <img src="{{post.content.url}}" class="post_img">
+            <div class="post_buttons">
+              <button type="button" name="like" value="Like">Like</button>
+              <button type="button" name="dislike" value="Dislike">Dislike</button> 
+              <button type="button" name="comment" value="Comment">Comment</button> 
+              <button type="button" name="share" value="Share">Share</button> 
+            </div>
+            <div class="post_comment">
+              This is comment section
+            </div>
+          </div>
+    <!-- </ul> -->
+          <div class="post_space"></div>
+        {% endfor %}
+</div>
+</div>
+
+
+{% endblock %}

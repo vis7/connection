@@ -1,0 +1,49 @@
+-> method not allowed 405
+=> https://stackoverflow.com/questions/22983222/405-post-method-not-allowed
+
+# while doing migrations
+-> django.db.utils.OperationalError: (1060, "Duplicate column name 'advertise_id_id'")
+=>https://stackoverflow.com/questions/36016485/duplicate-column-name#46506061
+
+# delete all migrations
+=> find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+=> find . -path "*/migrations/*.pyc"  -delete
+
+# django.db.utils.OperationalError: (1060, "Duplicate column name 'advertise_id_id'")
+=> delete all migration
+=> delete database
+=> create database, create superuser and try to run
+
+# accesing url parameter in class based view
+=> https://stackoverflow.com/questions/15754122/url-parameters-and-logic-in-django-class-based-views-templateview
+
+# uploading and fetching image and showing it to templateview
+=> https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial
+
+# multivalue dict key error
+=> https://stackoverflow.com/questions/5895588/django-multivaluedictkeyerror-error-how-do-i-deal-with-it#5895670
+
+# how to access url parameter in class based views (including generic views)
+=> https://stackoverflow.com/questions/15754122/url-parameters-and-logic-in-django-class-based-views-templateview
+
+# capturing parameter from url in function based view
+=> https://stackoverflow.com/questions/150505/capturing-url-parameters-in-request-get
+
+# update default image in model
+https://stackoverflow.com/questions/1276887/default-image-for-imagefield-in-djangos-orm
+
+#   File "/home/vishvajeet/Desktop/Programming/django/environment/django/lib/python3.6/site-packages/cryptography/hazmat/backends/openssl/rsa.py", line 357, in decrypt
+    raise ValueError("Ciphertext length must be equal to key size.")
+ValueError: Ciphertext length must be equal to key size.
+=> https://stackoverflow.com/questions/39627844/python-ciphertext-length-must-be-equal-to-key-size-different-string-length-a
+=> make sure to base64 encode before storing into db and base64 decode after retriving from db, and also make sure that you are using
+write key for encryption and decription not just right pair but also public key for encryption and private key for decryption like that.
+also make sure that you save this field as binary and not string. if you do that then also you will get the same error
+
+# key pair generated key is unix style, new generated private key is dos style
+=> we are modifying keys from pair so generated keys are readily compared.
+we need to install bello
+=> sudo apt-get install dos2unix
+after installation we can convert dos2unix and unix2dos
+
+

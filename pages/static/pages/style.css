@@ -1,0 +1,136 @@
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #007bff;
+  color: white;
+}
+
+#main_area{
+  height: 500px;
+  /* height: auto; */
+  background-color: antiquewhite;
+  width: 200;
+  /* overflow: auto; */
+}
+
+body {
+  font-family: Arial;
+  /*padding: 10px;*/
+  background: #f1f1f1;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 25%;
+  /* height: auto; */
+  display: block;
+  overflow: auto;
+  /* position: relative; */
+  /* min-height: 100% !important; */
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 75%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  height: auto;
+  overflow: auto;
+  /* padding: 2px; */
+  /* position: relative; */
+}
+
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#profile_pic{
+	height: 200px;
+	width: 200px;
+	/*margin-left: 300px;*/
+	/*align-self: center;*/
+}
+th, td {
+  border-bottom: 2px solid #ddd;
+}
+ /* post card css */
+.post{
+	width: 450px;
+	height: 850px;
+	border-style: solid;;
+	border-width: 1px;
+	display: inline-block;
+}
+
+.post .post_img{
+	width: 450px;
+	height: 400px;
+}
+
+.post .profile_pic{
+	height: 50px;
+	width: 50px;
+}
+
+.post .text_description{
+	width: 100%;
+	height: 100px;
+}
+
+.post_buttons{
+	text-align: center;
+	padding: 10px;
+}
+
+.post_comment{
+	width: 550px;
+	height: 300px;
+}
+
+/* keep space between consequtive posts */
+.post_space{
+  height: 20px;
+  width: 100%;
+  background-color:white;
+}
+
+/* friendlist style */
+.user_list_container{
+  width: 60%;
+}
+
+.user_list_div{
+	width: 60%;
+  height: 100px;
+  /* height: auto; */
+  /* overflow: auto; */
+	/*background-color: pink;*/
+	border-style: solid;
+	border-width: 1px;
+}
+
+.user_list_div img{
+	float: left;
+}
+

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form action='.' method='POST'>{% csrf_token %}
+    <h2>Do you want to delete the event "{{ event.event_name }}"?</h2>
+    <p><input type='submit' value='Yes' />  <a href='../'>Cancel</a></p>
+
+</form>
+
+
+
+
+{% endblock %}

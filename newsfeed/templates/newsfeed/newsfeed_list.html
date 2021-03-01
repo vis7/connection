@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Newfeed List</h2>
+    <ul>
+        {% for newsfeed in object_list %}
+            <li>{{ newsfeed.id }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

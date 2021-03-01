@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>community</h2>
+    <ul>
+        {% for community in object_list %}
+            <li>{{ community.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

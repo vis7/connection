@@ -1,0 +1,4 @@
+=> find program which generate classes from uml diagram for python too(for django too)(also check for other language
+and make list of UML program with comparision along with comparision of wikipedia) if such program not
+found then make fork and make it yourself and put it as opensource under MIT licence
+=> 

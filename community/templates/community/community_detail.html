@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- {{ community.name }}
+{{ community.rules }}
+{{ community.description }} -->
+
+<!-- <h2 align="center">Community Detail</h2> -->
+<table align="center" cellpadding="10px">
+	<tr>
+		<th>Name: </th>
+		<td>{{community.name}}</td>
+	</tr>
+	<tr>
+		<th>Admin: </th>
+		<td>{{community.admin_id.username}}</td>
+	</tr>
+	<tr>
+		<th>Rules: </th>
+		<td> {{community.rules}} </td>
+	</tr>
+	<tr>
+		<th>Description: </th>
+		<td> {{community.description}}</td>
+	</tr>
+	<tr>
+		<th>Registration Time: </th>
+		<td> {{community.registration_time}}</td>
+	</tr>
+	<tr>
+		<th>Mobile: </th>
+		<td>{{user.mobile}}</td>
+	</tr>
+	<tr>
+		<th>Email: </th>
+		<td>{{user.email}}</td>
+	</tr>
+	<tr>
+		<th>Gender: </th>
+		<td>{{user.gender}}</td>
+	</tr>
+	<tr>
+		<th>Language: </th>
+		<td>{{user.language}}</td>
+	</tr>
+</table>
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,2 @@
+for adding post with user_id do bellow
+=> https://docs.djangoproject.com/en/3.0/topics/class-based-views/generic-editing/

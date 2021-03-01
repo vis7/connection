@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>comments</h2>
+    <ul>
+        {% for comment in object_list %}
+            <li> {{comment.comment_id}} - {{comment.on_post.post_id}} - {{ comment.comment_text }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

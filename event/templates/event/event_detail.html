@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- {{ event.event_name }}
+{{ event.description }}
+{{ event.location }}
+{{ event.datetime }}
+{{ event.event_type }} -->
+
+<h2 align="center">Event Detail</h2>
+<table align="center" cellpadding="10px">
+	<tr>
+		<th>Event Name: </th>
+		<td>{{event.event_name}}</td>
+	</tr>
+	<tr>
+		<th>Description: </th>
+		<td>{{event.description}}</td>
+	</tr>
+	<tr>
+		<th>Location: </th>
+		<td> {{event.location}} </td>
+	</tr>
+	<tr>
+		<th>Date: </th>
+		<td> {{event.datetime}}</td>
+	</tr>
+	<tr>
+		<th>Event Type: </th>
+		<td> {{event.event_type}}</td>
+	</tr>
+	<tr>
+		<th>Mobile: </th>
+		<td>{{user.mobile}}</td>
+	</tr>
+	<tr>
+		<th>Email: </th>
+		<td>{{user.email}}</td>
+	</tr>
+	<tr>
+		<th>Gender: </th>
+		<td>{{user.gender}}</td>
+	</tr>
+	<tr>
+		<th>Language: </th>
+		<td>{{user.language}}</td>
+	</tr>
+</table>
+
+
+
+
+{% endblock  %}

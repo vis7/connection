@@ -1,0 +1,34 @@
+=> add country code to the BaseUser model
+=> replace gender other and include all element of LGBT individually
+=> work_experience field of User make ManyToMany so we can find people who works in same workplace 
+from CharField
+=> make diffrent model for university and also for degree
+=> add tag friends in post. this can be done by adding tagged_friends field to the post table
+=> table of timeline can be added where friends of user posted things, tagged him in post, which post 
+if approved by user will be shown in timeline
+=> add model for EducationInstitute, Degree. In addition in Education model add foreignKey of both 
+EducationInstitute and Degree.
+=> add model City and in model CityInLived give reference to it.
+=> make seprate model and build relationship for bellow, As described above for EducationInstitute,
+WorkPlace
+    -> Language, UserSpeaksLanguage(like that for Language)
+    -> Add option in Relationship_status same as FB
+    -> hodbby
+    -> movies
+    -> tvshows
+    -> books
+=> explore possility if we can allow user to share video and audio file
+=> make base_post class which is extended by post and comment. Enabel like, dislike and nested 
+comments in comment also.
+=> user allowed to change notification preferenced
+=> we can allowed user to diffrent setting for individual profile detail
+=> more event type can be added
+=> django's permission and group can be used for advertiser, admin and User. Best way i can see to
+impliment it is by overriding create method of model and every new instance will be added to respective
+group
+=> user can also transefer from other network to our network. But currently we has to depends upon other social network from which user want to migrate. In future version It can also figure out some method to do it on it’s own.
+
+
+
+
+

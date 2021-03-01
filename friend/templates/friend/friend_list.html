@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- <h2>friend List</h2> -->
+    <div class="user_list_container">
+    {% for friend in user.friends.all %}
+    <div class='user_list_div'>
+        <form action="{% url 'friend:process_friend_request' %}" method="POST"> {% csrf_token %}
+            <img src="{{friend.profile_pic.url}}" width="100px" height="100px"> <a href="{% url 'user:user_detail' pk=friend.pk %}"> {{friend.username}}</a>  <br>
+            <input type="submit" value="Message" name="message">
+        </form>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}

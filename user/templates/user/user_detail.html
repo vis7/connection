@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+	<center><img src="{{user.profile_pic.url}}" id="profile_pic"></center>
+	<h1 align="center">{{user.username}} {{ page_user_id }} {{logged_user_id}}</h1>
+	{{is_same_user_as_logged_in}} <br>
+	{% if is_same_user_as_logged_in %}
+	
+	{% else %}
+		{% if is_friend %}
+			{{user.username}} is you friend
+		{% else %}
+			{% if is_friend_request_send %}
+				Friend request send 
+			{% else %}
+				<form method="post" action="{% url 'friend:send_friend_request' %}"> {% csrf_token %}
+					<input type="hidden" name="fr_send_by" value={{logged_user_id}}>
+					<input type="hidden" name="fr_send_to" value={{page_user_id}}>
+					<button type="submit">Add Friend</button>
+				</form>
+			{% endif %}
+		{% endif %}
+
+	{% endif %}
+	<!-- if the page we are seeing is not the user who is logged in then show this -->
+
+
+	<h2 align="center">Intro</h2>
+<table align="center" cellpadding="10px">
+	<tr>
+		<th>Name: </th>
+		<td>{{user.username}}</td>
+	</tr>
+	<tr>
+		<th>username: </th>
+		<td>{{user.username}}</td>
+	</tr>
+	<tr>
+		<th>Date of Birth: </th>
+		<td> {{user.dob}} </td>
+	</tr>
+	<tr>
+		<th>Location: </th>
+		<td> {{user.location}}</td>
+	</tr>
+	<tr>
+		<th>Country: </th>
+		<td> {{user.country}}</td>
+	</tr>
+	<tr>
+		<th>Mobile: </th>
+		<td>{{user.mobile}}</td>
+	</tr>
+	<tr>
+		<th>Email: </th>
+		<td>{{user.email}}</td>
+	</tr>
+	<tr>
+		<th>Gender: </th>
+		<td>{{user.gender}}</td>
+	</tr>
+	<tr>
+		<th>Language: </th>
+		<td>{{user.language}}</td>
+	</tr>
+</table>
+<h2 align="center">About</h2>
+<table align="center" cellpadding="10px">
+	<tr>
+		<th>Relationship Status: </th>
+		<td>{{user.relationship_stauts}}</td>
+	</tr>
+	<tr>
+		<th>Hobbies: </th>
+		<td>{{user.hobbies}}</td>
+	</tr>
+	<tr>
+		<th>Movies: </th>
+		<td>{{user.movies}}</td>
+	</tr>
+	<tr>
+		<th>TV Shows: </th>
+		<td>{{user.tv_shows}}</td>
+	</tr>
+	<tr>
+		<th>Books: </th>
+		<td>{{user.books}}</td>
+	</tr>
+</table>
+
+</div>
+
+
+
+
+{% endblock  %}
